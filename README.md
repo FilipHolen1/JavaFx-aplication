@@ -8,6 +8,8 @@ This JavaFX-based desktop application is designed to manage a fleet of vehicles 
 - **User**: Limited access — can view vehicle information and report faults
 
 ## Features
+![veh](https://github.com/user-attachments/assets/91e73e22-d6a4-439a-99d0-b286c2d6ed91)
+
 
 **View All Vehicles**: Browse the entire fleet and see vehicle details
 **Upcoming Maintenance**: Easily view upcoming maintenance tasks and reminders
