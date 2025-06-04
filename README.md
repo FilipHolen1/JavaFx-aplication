@@ -7,7 +7,7 @@ This JavaFX-based desktop application is designed to manage a fleet of vehicles 
 - **Admin**: Full access — can manage vehicles, drivers, and view all maintenance data
 - **User**: Limited access — can view vehicle information and report faults
 
-## ✨ Features
+## Features
 
 **View All Vehicles**: Browse the entire fleet and see vehicle details
 **Upcoming Maintenance**: Easily view upcoming maintenance tasks and reminders
@@ -16,7 +16,7 @@ This JavaFX-based desktop application is designed to manage a fleet of vehicles 
 **Vehicle Management**: Add, edit, or delete vehicle records
 **Search and Filter**: Quickly find vehicles or maintenance data
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - Java 17+
 - JavaFX (UI)
