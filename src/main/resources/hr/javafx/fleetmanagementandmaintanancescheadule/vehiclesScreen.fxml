@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.javafx.fleetmanagementandmaintanancescheadule.controller.VehiclesScreenController">
+   <children>
+       <fx:include source="menuScreen.fxml" />
+      <GridPane prefHeight="578.0" prefWidth="800.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="496.20001220703125" minWidth="10.0" prefWidth="400.600048828125" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="639.2000091552734" minWidth="10.0" prefWidth="398.9999511718749" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="639.2000091552734" minWidth="10.0" prefWidth="398.9999511718749" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="78.4" minHeight="10.0" prefHeight="41.60001220703125" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="78.4" minHeight="10.0" prefHeight="41.60001220703125" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="51.79999084472656" minHeight="10.0" prefHeight="46.999987792968746" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="93.40000000000003" minHeight="10.0" prefHeight="56.199975585937494" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="109.59995117187498" minHeight="0.0" prefHeight="51.4000244140625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="138.39999999999998" minHeight="10.0" prefHeight="76.79999389648435" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="315.19999389648433" minHeight="10.0" prefHeight="288.80000610351567" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label focusTraversable="true" text="VEHICLES" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Rockwell" size="22.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="yearComboBox" prefWidth="150.0" promptText="Select Year" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <TableView fx:id="contactsTableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="578.0" GridPane.columnSpan="2" GridPane.rowIndex="6">
+              <columns>
+                <TableColumn fx:id="vehicleManufacturerTableColumn" prefWidth="127.20001065731049" text="Manufacturer" />
+                <TableColumn fx:id="vehicleModelTableColumn" prefWidth="72.0" text="Model" />
+                  <TableColumn fx:id="vehicleYearTableColumn" prefWidth="73.5999755859375" text="Year" />
+                  <TableColumn fx:id="vehicleRegistrationTableColumn" maxWidth="150.0" minWidth="131.20001220703125" prefWidth="140.79998779296875" text="Registration Number" />
+                  <TableColumn fx:id="vehicleRegistrationExpiryTableColumn" minWidth="0.0" prefWidth="159.2000732421875" text="Registration Expiry Date" />
+              </columns>
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="120.0" />
+               </GridPane.margin>
+            </TableView>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0000762939453" minWidth="10.0" prefWidth="191.999951171875" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.20001220703125" minWidth="10.0" prefWidth="96.800048828125" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#editVehicleButton" text="  EDIT  " textFill="#0048ff" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#deleteVehicle" text="DELETE" textFill="RED" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="111.0" />
+                     </padding>
+                  </GridPane>
+               </children></VBox>
+            <Button mnemonicParsing="false" onAction="#showVehiclesButton" text="SHOW" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="registrationTextField" maxWidth="150.0" promptText="Registration number" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </TextField>
+            <ImageView fitHeight="61.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <ComboBox fx:id="manufacturerComboBox" prefWidth="150.0" promptText="Select Manufacturer" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ImageView fx:id="vehicleImageView" fitHeight="177.0" fitWidth="263.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin></ImageView>
+            <Label fx:id="mainLabel" prefHeight="34.0" prefWidth="273.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="22.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Times New Roman" size="29.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+            <Label fx:id="vinLabel" layoutX="556.0" layoutY="68.0" prefHeight="30.0" prefWidth="270.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="registrationLabel" prefHeight="18.0" prefWidth="1275.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="registrationExpireLabel" prefHeight="30.0" prefWidth="1202.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="55.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="conditionLabel" prefHeight="18.0" prefWidth="203.0" GridPane.columnIndex="2" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="11.0" left="23.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#logsButton" text="Logs" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="14.0" right="15.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Imprint MT Shadow" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="driverLabel" prefHeight="30.0" prefWidth="1202.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="11.0" right="55.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="floatLabel" prefHeight="30.0" prefWidth="1202.0" GridPane.columnIndex="2" GridPane.rowIndex="6" GridPane.valignment="TOP">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="earliestExpityLabel" prefHeight="30.0" prefWidth="1205.0" GridPane.columnSpan="3" GridPane.halignment="LEFT">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="statusLabel" prefHeight="30.0" prefWidth="814.0" textFill="RED" GridPane.columnSpan="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

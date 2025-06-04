@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.javafx.fleetmanagementandmaintanancescheadule.controller.AddMaintenanceScheduleScreenController">
+    <children>
+        <fx:include source="menuScreen.fxml" />
+        <GridPane prefHeight="578.0" prefWidth="800.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="496.20001220703125" minWidth="10.0" prefWidth="400.600048828125" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="639.2000091552734" minWidth="10.0" prefWidth="346.2" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="639.2000091552734" minWidth="10.0" prefWidth="186.20000000000005" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="78.4" minHeight="10.0" prefHeight="41.60001220703125" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="78.4" minHeight="10.0" prefHeight="41.60001220703125" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="51.79999084472656" minHeight="10.0" prefHeight="46.999987792968746" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="93.40000000000003" minHeight="10.0" prefHeight="56.199975585937494" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="109.59995117187498" minHeight="0.0" prefHeight="51.4000244140625" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="179.80003051757814" minHeight="10.0" prefHeight="177.40000610351564" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="315.19999389648433" minHeight="10.0" prefHeight="178.9999938964844" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label focusTraversable="true" text="ADD MAINTENANCE SCHEDULE" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Rockwell" size="22.0" />
+                    </font>
+                </Label>
+                <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <Label fx:id="MMYLabel" prefHeight="34.0" prefWidth="273.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets bottom="22.0" />
+                    </GridPane.margin>
+                    <font>
+                        <Font name="Times New Roman" size="29.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Label>
+                <Label fx:id="vinLabel" layoutX="556.0" layoutY="68.0" prefHeight="30.0" prefWidth="270.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="registrationLabel" prefHeight="18.0" prefWidth="1275.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="registrationExpireLabel" prefHeight="30.0" prefWidth="1202.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets right="55.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="driverLabel" prefHeight="30.0" prefWidth="1202.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="11.0" right="55.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="floatLabel" prefHeight="30.0" prefWidth="1202.0" GridPane.columnIndex="2" GridPane.rowIndex="6" GridPane.valignment="TOP">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets bottom="11.0" />
+                    </GridPane.margin>
+                </Label>
+                <TextField fx:id="mechanicTextField" maxWidth="230.0" minWidth="230.0" prefWidth="230.0" promptText="Mechanic Name" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                <DatePicker fx:id="dateDatePicker" maxWidth="230.0" minWidth="230.0" prefWidth="230.0" promptText="dd/MM/yyyy" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                <Button mnemonicParsing="false" onAction="#saveMaintenanceScheduleButton" text="Save" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                <Label fx:id="firstNameErrorLabel" text="" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="100.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="secondNameErrorLabel" text="" textFill="RED" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="100.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="licenseNumberErrorLabel" text="" textFill="RED" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets left="100.0" />
+                    </GridPane.margin>
+                </Label>
+            <ComboBox fx:id="vehicleComboBox" maxWidth="230.0" minWidth="230.0" prefWidth="230.0" promptText="Choose Vehicle" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <TextArea fx:id="descriptionTextArea" maxHeight="130.0" maxWidth="230.0" minHeight="150.0" minWidth="230.0" prefHeight="130.0" prefWidth="230.0" promptText="Description" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            </children>
+        </GridPane>
+    </children>
+</VBox>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="10.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.javafx.fleetmanagementandmaintanancescheadule.controller.MenuScreenController">
+    <children>
+        <MenuBar layoutY="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Vehicles">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#showScreenVehicles" text="View Veichles" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#showScreenAddVehicle" text="Add New Veichle" />
+               </items></Menu>
+                <Menu mnemonicParsing="false" text="Drivers">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#showScreenDrivers" text="View Drivers" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#showScreenAddDriver" text="Add New Driver" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Maintenance Schedule">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#showScreeMaintenanceSchedule" text="View Maintenance Schedules" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#showScreeAddMaintenanceSchedule" text="Add Maintenance Schedule" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false">
+                    <graphic>
+                        <HBox prefHeight="18.0" prefWidth="406.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></HBox>
+                    </graphic>
+                </Menu>
+
+                <Menu mnemonicParsing="false" text="Settings">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#showChanges" text="view changes" />
+                        <MenuItem mnemonicParsing="false" text="change theme" />
+                        <MenuItem mnemonicParsing="false" onAction="#showLoginScreen" text="log out" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+</AnchorPane>
